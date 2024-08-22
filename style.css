@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.nav{
+    width: 100%;
+    height: 120px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 0 80px;
+    position: fixed;
+    z-index: 99;
+}
+.nav img{
+    width: 75px;
+}
+.nav h3{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    /* background-color: red; */
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    background-color: #95C11E;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 4;
+}
+.blur{
+    width: 250px;
+    height: 250px;
+    background-color: #96c11e48;
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(35px);
+    z-index: 3;
+}
+video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    z-index: -12;
+}
+.main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.479);
+}
+.page1{
+    height:100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    /* background-color: red; */
+}
+.page1 h1{
+    font-size: 90px;
+    position: relative;
+}
+.page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 2px #95C11E;
+    z-index: -1;
+}
+.page1 h2{
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.page1 p{
+    /* background-color: red; */
+    width: 40%;
+    font-weight: 300;
+    font-size: 15px;
+}
+.page1 .arrow{
+    height: 120px;
+    width: 120px;
+    border: 2px solid #95C11E;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    position: absolute;
+    left: -5px;
+    bottom: 0;
+    z-index: 3;
+    transition: all linear 0.4s;
+}
+.page1 .arrow i{
+    font-size: 25px;
+}
+.page1 .arrow:hover{
+    background-color: #95C11E;
+    scale: 0.5;
+}
+.page2{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: red; */
+}
+.scroller{
+   /* background-color: red; */
+   white-space: nowrap;
+   overflow-y: hidden;
+   overflow-x: auto;
+   position: relative;
+   z-index: 99;
+}
+.scroller::-webkit-scrollbar{
+    display: none;
+}
+.scroller h4{
+     display: inline-block;
+     font-size: 70px;
+     font-weight: 900;
+     margin-right: 10px;
+     text-transform: uppercase;
+     -webkit-text-stroke: 2px #95C11E;
+     transition: all linear 0.4s;
+     color: transparent;
+}
+.scroller h4:hover{
+    color: #95C11E;
+}
+.scroller-in{
+    display: inline-block;
+    /* background-color: blue; */
+    animation: scroll 20s linear  infinite ;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+.about-us{
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+.about-us img{
+    width: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about-us h3{
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+.about-us p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 25px;
+}
+.about-us-in{
+    text-align: center;
+    padding: 20px;
+}
+.cards-container{
+    /* background-color: red; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.cards{
+    background-color: rgb(75, 75, 95);
+    height: 80%;
+    width: 27%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+.cards:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+#cards1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#cards2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+
+}
+#cards3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+
+}
+.overlay{
+    background-color:#95C11E ;
+    height: 100%;
+    /* padding-top: 100px; */
+    padding: 30px;
+    opacity: 0;
+    transition: all ease 0.7s;
+    position: relative;
+    z-index: 10;
+}
+.overlay:hover{
+    opacity: 1;
+}
+.overlay h4{
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.overlay p{
+    color: black;
+}
+.green{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30vh;
+    background: linear-gradient(to left bottom ,#119f3a,#Ace022);
+}
+.green h4{
+    font-size: 30px;
+    width: 70%;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+}
+.green img{
+    width: 15%;
+    height: 100%;
+    object-fit: cover;
+}
+.page3{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.page3 p{
+    font-size: 25px;
+    width: 60%;
+    font-weight: 900;
+    position: relative;
+    z-index: 12;
+}
+.page3 img{
+   position: absolute;
+    width: 50px;
+    z-index: 10;
+}
+.page3 #img1{
+    top: 20%;
+    left: 10%;
+}
+.page3 #img2{
+    bottom: 20%;
+    right: 10%;
+}
+.page4{
+    height: 40vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+}
+.page4 .elem{
+    width: 27%;
+    background-color: blue;
+    height: 60%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+.page4 #box1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-lessons-1024x683.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    background-position: center;
+    background-size: cover;
+}
+.page4 #box2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-toptracer-1024x683.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    background-position: center;
+    background-size: cover;
+}
+.page4 #box3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/page-ag-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    background-position: center;
+    background-size: cover;
+}
+.page4 h2{
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    /* cursor: pointer; */
+    /* position: absolute; */
+    /* z-index: 10; */
+    transition: all linear 0.4s;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.page4 h2:hover{
+    background-color: transparent;
+    color: white;
+}
+.page4 h1{
+    position: absolute;
+    top: 0px;
+    font-size: 60px;
+    font-weight: 800;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    color: black;
+}
